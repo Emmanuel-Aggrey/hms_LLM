@@ -15,6 +15,8 @@ For example:
 
 - Create a .env file in root directory to override all environmental variables
 
+- use same .env setup as defind in .env.example
+
 - You can also set the variable as system variables
 
 A step by step list of commands.
@@ -128,5 +130,3 @@ A secure backend system for hospitals to manage user signups, patient-doctor ass
 
 5. **Patient Checks In**:
    - Marks a task as completed, and the system moves to the next reminder.
-
----
