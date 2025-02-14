@@ -130,12 +130,3 @@ A secure backend system for hospitals to manage user signups, patient-doctor ass
    - Marks a task as completed, and the system moves to the next reminder.
 
 ---
-
-## Future Improvements
-
-- **Frontend**: Develop a user-friendly interface for patients and doctors.
-- **Enhanced LLM**: Improve the LLM to handle complex medical terminology.
-- **Analytics Dashboard**: Add a dashboard for doctors to track patient adherence.
-- **Mobile App**: Build a mobile app for patients to receive reminders and check in.
-
----
