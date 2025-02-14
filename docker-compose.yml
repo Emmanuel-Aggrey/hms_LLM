@@ -1,0 +1,42 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:14.1-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5432"
+    volumes:
+      - db:/var/lib/postgresql/data
+
+  web:
+    build: .
+    command: bash -c "bash ./scripts/entrypoint.bash"
+    container_name: backend
+    volumes:
+      - .:/backend
+    env_file:
+      - .env
+    environment:
+      - DATABASE_NAME=postgres
+      - DATABASE_HOST=db
+    ports:
+      - "7000"
+    depends_on:
+      - db
+
+  nginx:
+    build: ./nginx
+    ports:
+      - 80:80
+    depends_on:
+      - web
+
+volumes:
+  db:
+    driver: local
+  web:
+    driver: local

@@ -1,0 +1,7 @@
+{
+    "python.testing.pytestArgs": [
+        "actionable_steps"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}
